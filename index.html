@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hamming Code Visualizer</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #e0e0e0;">Hamming Code Visualizer</h1>
+        <h3 style="text-align: center; margin-bottom: 2rem; color: #bbb;">24BCE527 & 23BCE317</h3>
+        
+        <div class="input-section">
+            <div style="margin-bottom: 1rem;">
+                <input type="text" id="dataBits" placeholder="Enter data bits (e.g., 1011)">
+                <button onclick="encodeData()">Encode</button>
+            </div>
+            <div>
+                <input type="number" id="errorPos" min="1" value="1" style="width: 120px;">
+                <button onclick="introduceError()">Introduce Error</button>
+                <button onclick="correctError()" style="background: #2ecc71;">Correct Error</button>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #6d5acd;"></div>
+                <span>Parity Bit</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #e74c3c;"></div>
+                <span>Error Bit</span>
+            </div>
+        </div>
+
+        <div id="visualization"></div>
+        <div id="steps" class="steps"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
